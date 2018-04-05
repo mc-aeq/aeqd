@@ -1,29 +1,18 @@
-dcrd
+aeqd
 ====
 
-[![Build Status](https://travis-ci.org/decred/dcrd.png?branch=master)](https://travis-ci.org/decred/dcrd)
+[![Build Status](https://travis-ci.org/mc-aeq/aeqd.png?branch=master)](https://travis-ci.org/mc-aeq/aeqd)
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](http://copyfree.org)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/decred/dcrd)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](https://godoc.org/github.com/mc-aeq/aeqd)
 
-dcrd is a Decred full node implementation written in Go (golang).
+aeqd is fork of [decred/dcrd]. aeqd is a full node Decred implementation written in Go (golang).
 
-This acts as a chain daemon for the [Decred](https://decred.org) cryptocurrency.
-dcrd maintains the entire past transactional ledger of Decred and allows
- relaying of transactions to other Decred nodes across the world.  To read more
-about Decred please see the
-[project documentation](https://docs.decred.org/#overview).
+This acts as a chain daemon for the [Æquator](https://aequator.iog) cryptocurrency.
+aeqd maintains the entire past transactional ledger of Æquator and allows relaying of transactions to other Æquator nodes across the world. 
 
-Note: To send or receive funds and join Proof-of-Stake mining, you will also need
-[dcrwallet](https://github.com/decred/dcrwallet).
+Note: To send or receive funds and join Proof-of-Stake mining, you will also need [aeqw](https://github.com/mc-aeq/aeqw) - the Æquator wallet.
 
-This project is currently under active development and is in a Beta state.  It
-is extremely stable and has been in production use since February 2016.
-
-It is forked from [btcd](https://github.com/btcsuite/btcd) which is a bitcoin
-full node implementation written in Go.  btcd is a ongoing project under active
-development.  Because dcrd is constantly synced with btcd codebase, it will
-get the benefit of btcd's ongoing upgrades to peer and connection handling,
-database optimization and other blockchain related technology improvements.
+This project is currently under active development and is in a Beta state.  It is extremely stable since it's based on Decred which has been in production use since February 2016.
 
 ## Requirements
 
@@ -31,10 +20,7 @@ database optimization and other blockchain related technology improvements.
 
 ## Getting Started
 
-- dcrd (and utilities) will now be installed in either ```$GOROOT/bin``` or
-  ```$GOPATH/bin``` depending on your configuration.  If you did not already
-  add the bin directory to your system path during Go installation, we
-  recommend you do so now.
+- aeqd (and utilities) will now be installed in either ```$GOROOT/bin``` or  ```$GOPATH/bin``` depending on your configuration.  If you did not already add the bin directory to your system path during Go installation, we recommend you do so now.
 
 ## Updating
 
@@ -51,43 +37,34 @@ Install a newer MSI
 
   `go get -u github.com/golang/dep/cmd/dep`
 
-Unfortunately, the use of `dep` prevents a handy tool such as `go get` from
-automatically downloading, building, and installing the source in a single
-command.  Instead, the latest project and dependency sources must be first
-obtained manually with `git` and `dep`, and then `go` is used to build and
-install the project.
+Unfortunately, the use of `dep` prevents a handy tool such as `go get` from automatically downloading, building, and installing the source in a single command.  Instead, the latest project and dependency sources must be first obtained manually with `git` and `dep`, and then `go` is used to build and install the project.
 
 **Getting the source**:
 
-For a first time installation, the project and dependency sources can be
-obtained manually with `git` and `dep` (create directories as needed):
+For a first time installation, the project and dependency sources can be obtained manually with `git` and `dep` (create directories as needed):
 
 ```
-git clone https://github.com/decred/dcrd $GOPATH/src/github.com/decred/dcrd
-cd $GOPATH/src/github.com/decred/dcrd
+git clone https://github.com/mc-aeq/aeqd $GOPATH/src/github.com/mc-aeq/aeqd
+cd $GOPATH/src/github.com/mc-aeq/aeqd
 dep ensure
 go install . ./cmd/...
 ```
 
-To update an existing source tree, pull the latest changes and install the
-matching dependencies:
+To update an existing source tree, pull the latest changes and install the matching dependencies:
 
 ```
-cd $GOPATH/src/github.com/decred/dcrd
+cd $GOPATH/src/github.com/mc-aeq/aeqd
 git pull
 dep ensure
 go install . ./cmd/...
 ```
 
-For more information about Decred and how to set up your software please go to
-our docs page at [docs.decred.org](https://docs.decred.org/getting-started/beginner-guide/).
+For more information about Æquator and how to set up your software please visit our website or ask our support staff.
 
 ## Docker
 
-All tests and linters may be run in a docker container using the script
-`run_tests.sh`.  This script defaults to using the current supported version of
-go.  You can run it with the major version of Go you would like to use as the
-only arguement to test a previous on a previous version of Go (generally Decred
+All tests and linters may be run in a docker container using the script `run_tests.sh`.  This script defaults to using the current supported version of
+go.  You can run it with the major version of Go you would like to use as the only arguement to test a previous on a previous version of Go (generally Decred
 supports the current version of Go and the previous one).
 
 ```
@@ -102,23 +79,21 @@ To run the tests locally without docker:
 
 ## Contact
 
-If you have any further questions you can find us at:
-
-- irc.freenode.net (channel #decred)
-- [webchat](https://webchat.freenode.net/?channels=decred)
-- forum.decred.org
-- decred.slack.com
+If you want to get in touch with us, please visit our website https://aequator.io - all possible communication channels are listed there.
 
 ## Issue Tracker
 
-The [integrated github issue tracker](https://github.com/decred/dcrd/issues)
-is used for this project.
+We're using a private JIRA bugtracking system. Please foward us any issues and we'll assign them internally. If you want to join our bug tracking team, contact us and you'll get direct access to our JIRA instance.
 
 ## Documentation
 
-The documentation is a work-in-progress.  It is located in the
-[docs](https://github.com/decred/dcrd/tree/master/docs) folder.
+Currently documentation is available in docs/ folder, but please be aware that those documentations may change at any given time.
 
 ## License
 
 dcrd is licensed under the [copyfree](http://copyfree.org) ISC License.
+aeqd is a fork from dcrd and also under the ISC License.
+
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+
+   [decred/dcrd]: <https://github.com/decred/dcrd>
