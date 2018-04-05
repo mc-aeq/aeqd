@@ -1,6 +1,7 @@
-aeqd
-====
+<img align="left" width="100" height="100" src="https://aequator.io/AEC_Logo_Final_RGB.svg">
 
+aeqd - Æquator daemon
+====
 [![Build Status](https://travis-ci.org/mc-aeq/aeqd.png?branch=master)](https://travis-ci.org/mc-aeq/aeqd)
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](http://copyfree.org)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](https://godoc.org/github.com/mc-aeq/aeqd)
