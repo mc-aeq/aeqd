@@ -18,3 +18,7 @@ cache:
 
 script:
   - ./run_tests.sh $GOVERSION
+
+notifications:
+  slack: trustchaintech:xequmrRoiVv4lMHtufkxwAEt
+  
