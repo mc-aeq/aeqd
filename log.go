@@ -58,7 +58,7 @@ var (
 	cmgrLog = backendLog.Logger("CMGR")
 	bcdbLog = backendLog.Logger("BCDB")
 	bmgrLog = backendLog.Logger("BMGR")
-	dcrdLog = backendLog.Logger("DCRD")
+	aeqdLog = backendLog.Logger("aeqd")
 	chanLog = backendLog.Logger("CHAN")
 	discLog = backendLog.Logger("DISC")
 	indxLog = backendLog.Logger("INDX")
@@ -91,7 +91,7 @@ var subsystemLoggers = map[string]btclog.Logger{
 	"CMGR": cmgrLog,
 	"BCDB": bcdbLog,
 	"BMGR": bmgrLog,
-	"DCRD": dcrdLog,
+	"aeqd": aeqdLog,
 	"CHAN": chanLog,
 	"DISC": discLog,
 	"INDX": indxLog,
@@ -160,7 +160,7 @@ func directionString(inbound bool) string {
 
 // fatalf logs a string, then cleanly exits.
 func fatalf(str string) {
-	dcrdLog.Errorf("Unable to create profiler: %v", str)
+	aeqdLog.Errorf("Unable to create profiler: %v", str)
 	os.Stdout.Sync()
 	if logRotator != nil {
 		logRotator.Close()

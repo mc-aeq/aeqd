@@ -15,7 +15,7 @@ const (
 
 	// BtcdConnectedNtfnMethod is the method used for notifications when
 	// a wallet server is connected to a chain server.
-	BtcdConnectedNtfnMethod = "dcrdconnected"
+	BtcdConnectedNtfnMethod = "aeqdconnected"
 
 	// WalletLockStateNtfnMethod is the method used to notify the lock state
 	// of a wallet has changed.
@@ -43,13 +43,13 @@ func NewAccountBalanceNtfn(account string, balance float64, confirmed bool) *Acc
 	}
 }
 
-// BtcdConnectedNtfn defines the dcrddconnected JSON-RPC notification.
+// BtcdConnectedNtfn defines the aeqddconnected JSON-RPC notification.
 type BtcdConnectedNtfn struct {
 	Connected bool
 }
 
 // NewBtcdConnectedNtfn returns a new instance which can be used to issue a
-// dcrddconnected JSON-RPC notification.
+// aeqddconnected JSON-RPC notification.
 func NewBtcdConnectedNtfn(connected bool) *BtcdConnectedNtfn {
 	return &BtcdConnectedNtfn{
 		Connected: connected,

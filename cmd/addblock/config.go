@@ -25,8 +25,8 @@ const (
 )
 
 var (
-	dcrdHomeDir     = dcrutil.AppDataDir("dcrd", false)
-	defaultDataDir  = filepath.Join(dcrdHomeDir, "data")
+	aeqdHomeDir     = dcrutil.AppDataDir("aeqd", false)
+	defaultDataDir  = filepath.Join(aeqdHomeDir, "data")
 	knownDbTypes    = database.SupportedDrivers()
 	activeNetParams = &chaincfg.MainNetParams
 )
@@ -35,7 +35,7 @@ var (
 //
 // See loadConfig for details on the configuration load process.
 type config struct {
-	DataDir           string `short:"b" long:"datadir" description:"Location of the dcrd data directory"`
+	DataDir           string `short:"b" long:"datadir" description:"Location of the aeqd data directory"`
 	DbType            string `long:"dbtype" description:"Database backend to use for the Block Chain"`
 	TestNet           bool   `long:"testnet" description:"Use the test network"`
 	SimNet            bool   `long:"simnet" description:"Use the simulation test network"`
@@ -68,7 +68,7 @@ func validDbType(dbType string) bool {
 }
 
 // netName returns the name used when referring to a bitcoin network.  At the
-// time of writing, dcrd currently places blocks for testnet version 2 in the
+// time of writing, aeqd currently places blocks for testnet version 2 in the
 // data and log directory "testnet2", which does not match the Name field of the
 // chaincfg parameters.  This function can be used to override this directory name
 // as "testnet2" when the passed active network matches wire.TestNet2.

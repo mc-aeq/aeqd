@@ -1,7 +1,7 @@
-dcrd Websockets Example
+aeqd Websockets Example
 =======================
 
-This example shows how to use the rpcclient package to connect to a dcrd RPC
+This example shows how to use the rpcclient package to connect to a aeqd RPC
 server using TLS-secured websockets, register for block connected and block
 disconnected notifications, and get the current block count.
 
@@ -27,7 +27,7 @@ password for the RPC server:
 Finally, navigate to the example's directory and run it with:
 
 ```bash
-$ cd $GOPATH/src/github.com/mc-aeq/aeqd/rpcclient/examples/dcrdwebsockets
+$ cd $GOPATH/src/github.com/mc-aeq/aeqd/rpcclient/examples/aeqdwebsockets
 $ go run *.go
 ```
 

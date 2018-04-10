@@ -17,13 +17,13 @@ import (
 )
 
 const (
-	// svcName is the name of dcrd service.
-	svcName = "dcrdsvc"
+	// svcName is the name of aeqd service.
+	svcName = "aeqdsvc"
 
 	// svcDisplayName is the service name that will be shown in the windows
 	// services list.  Not the svcName is the "real" name which is used
 	// to control the service.  This is only for display purposes.
-	svcDisplayName = "Dcrd Service"
+	svcDisplayName = "aeqd Service"
 
 	// svcDesc is the description of the service.
 	svcDesc = "Downloads and stays synchronized with the Decred block " +
@@ -33,7 +33,7 @@ const (
 // elog is used to send messages to the Windows event log.
 var elog *eventlog.Log
 
-// logServiceStartOfDay logs information about dcrd when the main server has
+// logServiceStartOfDay logs information about aeqd when the main server has
 // been started to the Windows event log.
 func logServiceStartOfDay(srvr *server) {
 	var message string
@@ -45,27 +45,27 @@ func logServiceStartOfDay(srvr *server) {
 	elog.Info(1, message)
 }
 
-// dcrdService houses the main service handler which handles all service
-// updates and launching dcrdMain.
-type dcrdService struct{}
+// aeqdService houses the main service handler which handles all service
+// updates and launching aeqdMain.
+type aeqdService struct{}
 
 // Execute is the main entry point the winsvc package calls when receiving
 // information from the Windows service control manager.  It launches the
-// long-running dcrdMain (which is the real meat of dcrd), handles service
+// long-running aeqdMain (which is the real meat of aeqd), handles service
 // change requests, and notifies the service control manager of changes.
-func (s *dcrdService) Execute(args []string, r <-chan svc.ChangeRequest, changes chan<- svc.Status) (bool, uint32) {
+func (s *aeqdService) Execute(args []string, r <-chan svc.ChangeRequest, changes chan<- svc.Status) (bool, uint32) {
 	// Service start is pending.
 	const cmdsAccepted = svc.AcceptStop | svc.AcceptShutdown
 	changes <- svc.Status{State: svc.StartPending}
 
-	// Start dcrdMain in a separate goroutine so the service can start
+	// Start aeqdMain in a separate goroutine so the service can start
 	// quickly.  Shutdown (along with a potential error) is reported via
 	// doneChan.  serverChan is notified with the main server instance once
 	// it is started so it can be gracefully stopped.
 	doneChan := make(chan error)
 	serverChan := make(chan *server)
 	go func() {
-		err := dcrdMain(serverChan)
+		err := aeqdMain(serverChan)
 		doneChan <- err
 	}()
 
@@ -111,7 +111,7 @@ loop:
 	return false, 0
 }
 
-// installService attempts to install the dcrd service.  Typically this should
+// installService attempts to install the aeqd service.  Typically this should
 // be done by the msi installer, but it is provided here since it can be useful
 // for development.
 func installService() error {
@@ -160,7 +160,7 @@ func installService() error {
 	return eventlog.InstallAsEventCreate(svcName, eventsSupported)
 }
 
-// removeService attempts to uninstall the dcrd service.  Typically this should
+// removeService attempts to uninstall the aeqd service.  Typically this should
 // be done by the msi uninstaller, but it is provided here since it can be
 // useful for development.  Not the eventlog entry is intentionally not removed
 // since it would invalidate any existing event log messages.
@@ -183,7 +183,7 @@ func removeService() error {
 	return service.Delete()
 }
 
-// startService attempts to start the dcrd service.
+// startService attempts to start the aeqd service.
 func startService() error {
 	// Connect to the windows service manager.
 	serviceManager, err := mgr.Connect()
@@ -292,7 +292,7 @@ func serviceMain() (bool, error) {
 	}
 	defer elog.Close()
 
-	err = svc.Run(svcName, &dcrdService{})
+	err = svc.Run(svcName, &aeqdService{})
 	if err != nil {
 		elog.Error(1, fmt.Sprintf("Service start failed: %v", err))
 		return true, err

@@ -1,8 +1,8 @@
 tickettreap
 ===========
 
-[![Build Status](https://img.shields.io/travis/decred/dcrd.svg)]
-(https://travis-ci.org/decred/dcrd) [![ISC License]
+[![Build Status](https://img.shields.io/travis/decred/aeqd.svg)]
+(https://travis-ci.org/decred/aeqd) [![ISC License]
 (http://img.shields.io/badge/license-ISC-blue.svg)](http://copyfree.org)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)]
 (http://godoc.org/github.com/mc-aeq/aeqd/blockchain/stake/internal/tickettreap)

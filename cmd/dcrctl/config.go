@@ -30,13 +30,13 @@ const (
 )
 
 var (
-	dcrdHomeDir            = dcrutil.AppDataDir("dcrd", false)
+	aeqdHomeDir            = dcrutil.AppDataDir("aeqd", false)
 	dcrctlHomeDir          = dcrutil.AppDataDir("dcrctl", false)
 	dcrwalletHomeDir       = dcrutil.AppDataDir("dcrwallet", false)
 	defaultConfigFile      = filepath.Join(dcrctlHomeDir, "dcrctl.conf")
 	defaultRPCServer       = "localhost"
 	defaultWalletRPCServer = "localhost"
-	defaultRPCCertFile     = filepath.Join(dcrdHomeDir, "rpc.cert")
+	defaultRPCCertFile     = filepath.Join(aeqdHomeDir, "rpc.cert")
 	defaultWalletCertFile  = filepath.Join(dcrwalletHomeDir, "rpc.cert")
 )
 
@@ -336,23 +336,23 @@ func loadConfig() (*config, []string, error) {
 }
 
 // createDefaultConfig creates a basic config file at the given destination path.
-// For this it tries to read the dcrd config file at its default path, and extract
+// For this it tries to read the aeqd config file at its default path, and extract
 // the RPC user and password from it.
 func createDefaultConfigFile(destinationPath string) error {
-	// Nothing to do when there is no existing dcrd conf file at the default
+	// Nothing to do when there is no existing aeqd conf file at the default
 	// path to extract the details from.
-	dcrdConfigPath := filepath.Join(dcrdHomeDir, "dcrd.conf")
-	if !fileExists(dcrdConfigPath) {
+	aeqdConfigPath := filepath.Join(aeqdHomeDir, "aeqd.conf")
+	if !fileExists(aeqdConfigPath) {
 		return nil
 	}
 
-	// Read dcrd.conf from its default path
-	dcrdConfigFile, err := os.Open(dcrdConfigPath)
+	// Read aeqd.conf from its default path
+	aeqdConfigFile, err := os.Open(aeqdConfigPath)
 	if err != nil {
 		return err
 	}
-	defer dcrdConfigFile.Close()
-	content, err := ioutil.ReadAll(dcrdConfigFile)
+	defer aeqdConfigFile.Close()
+	content, err := ioutil.ReadAll(aeqdConfigFile)
 	if err != nil {
 		return err
 	}

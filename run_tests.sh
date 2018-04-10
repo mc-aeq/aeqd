@@ -20,7 +20,7 @@ set -ex
 
 #Default GOVERSION
 GOVERSION=${1:-1.10}
-REPO=dcrd
+REPO=aeqd
 DOCKER_IMAGE_TAG=decred-golang-builder-$GOVERSION
 
 testrepo () {

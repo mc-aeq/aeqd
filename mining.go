@@ -43,7 +43,7 @@ const (
 
 	// coinbaseFlags is some extra data appended to the coinbase script
 	// sig.
-	coinbaseFlags = "/dcrd/"
+	coinbaseFlags = "/aeqd/"
 
 	// kilobyte is the size of a kilobyte.
 	kilobyte = 1000

@@ -1,18 +1,18 @@
 database
 ========
 
-[![Build Status](http://img.shields.io/travis/decred/dcrd.svg)](https://travis-ci.org/decred/dcrd)
+[![Build Status](http://img.shields.io/travis/decred/aeqd.svg)](https://travis-ci.org/decred/aeqd)
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](http://copyfree.org)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/mc-aeq/aeqd/database)
 
 Package database provides a block and metadata storage database.
 
-Please note that this package is intended to enable dcrd to support different
+Please note that this package is intended to enable aeqd to support different
 database backends and is not something that a client can directly access as only
 one entity can have the database open at a time (for most database backends),
-and that entity will be dcrd.
+and that entity will be aeqd.
 
-When a client wants programmatic access to the data provided by dcrd, they'll
+When a client wants programmatic access to the data provided by aeqd, they'll
 likely want to use the [dcrrpcclient](https://github.com/decred/dcrrpcclient)
 package which makes use of the [JSON-RPC API](https://github.com/mc-aeq/aeqd/tree/master/docs/json_rpc_api.md).
 

@@ -1,7 +1,7 @@
 indexers
 ========
 
-[![Build Status](https://travis-ci.org/decred/dcrd.png?branch=master)](https://travis-ci.org/decred/dcrd)
+[![Build Status](https://travis-ci.org/decred/aeqd.png?branch=master)](https://travis-ci.org/decred/aeqd)
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](http://copyfree.org)
 [![GoDoc](https://godoc.org/github.com/mc-aeq/aeqd/blockchain/indexers?status.png)](http://godoc.org/github.com/mc-aeq/aeqd/blockchain/indexers)
 
