@@ -10,9 +10,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/decred/dcrd/chaincfg/chainhash"
-	"github.com/decred/dcrd/txscript"
-	"github.com/decred/dcrd/wire"
+	"github.com/mc-aeq/aeqd/chaincfg/chainhash"
+	"github.com/mc-aeq/aeqd/txscript"
+	"github.com/mc-aeq/aeqd/wire"
 )
 
 // TestPushedData ensured the PushedData function extracts the expected data out

@@ -13,7 +13,7 @@ import (
 	"time"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/decred/dcrd/chaincfg/chainhash"
+	"github.com/mc-aeq/aeqd/chaincfg/chainhash"
 )
 
 // TestBlockHeader tests the BlockHeader API.

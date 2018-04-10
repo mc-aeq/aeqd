@@ -12,13 +12,13 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/decred/dcrd/blockchain/internal/progresslog"
-	"github.com/decred/dcrd/blockchain/stake"
-	"github.com/decred/dcrd/chaincfg"
-	"github.com/decred/dcrd/chaincfg/chainhash"
-	"github.com/decred/dcrd/database"
-	"github.com/decred/dcrd/dcrutil"
-	"github.com/decred/dcrd/wire"
+	"github.com/mc-aeq/aeqd/blockchain/internal/progresslog"
+	"github.com/mc-aeq/aeqd/blockchain/stake"
+	"github.com/mc-aeq/aeqd/chaincfg"
+	"github.com/mc-aeq/aeqd/chaincfg/chainhash"
+	"github.com/mc-aeq/aeqd/database"
+	"github.com/mc-aeq/aeqd/dcrutil"
+	"github.com/mc-aeq/aeqd/wire"
 )
 
 // errInterruptRequested indicates that an operation was cancelled due

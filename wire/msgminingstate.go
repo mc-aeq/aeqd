@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/decred/dcrd/chaincfg/chainhash"
+	"github.com/mc-aeq/aeqd/chaincfg/chainhash"
 )
 
 // MaxMSBlocksAtHeadPerMsg is the maximum number of block hashes allowed

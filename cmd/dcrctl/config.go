@@ -16,8 +16,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/decred/dcrd/dcrjson"
-	"github.com/decred/dcrd/dcrutil"
+	"github.com/mc-aeq/aeqd/dcrjson"
+	"github.com/mc-aeq/aeqd/dcrutil"
 
 	flags "github.com/jessevdk/go-flags"
 )

@@ -9,8 +9,8 @@ import (
 	"fmt"
 
 	"github.com/btcsuite/btclog"
-	"github.com/decred/dcrd/database"
-	"github.com/decred/dcrd/wire"
+	"github.com/mc-aeq/aeqd/database"
+	"github.com/mc-aeq/aeqd/wire"
 )
 
 var log = btclog.Disabled

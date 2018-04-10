@@ -11,11 +11,11 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/decred/dcrd/chaincfg"
-	"github.com/decred/dcrd/database"
-	_ "github.com/decred/dcrd/database/ffldb"
-	"github.com/decred/dcrd/dcrutil"
-	"github.com/decred/dcrd/wire"
+	"github.com/mc-aeq/aeqd/chaincfg"
+	"github.com/mc-aeq/aeqd/database"
+	_ "github.com/mc-aeq/aeqd/database/ffldb"
+	"github.com/mc-aeq/aeqd/dcrutil"
+	"github.com/mc-aeq/aeqd/wire"
 )
 
 // This example demonstrates creating a new database.
@@ -23,8 +23,8 @@ func ExampleCreate() {
 	// This example assumes the ffldb driver is imported.
 	//
 	// import (
-	// 	"github.com/decred/dcrd/database2"
-	// 	_ "github.com/decred/dcrd/database/ffldb"
+	// 	"github.com/mc-aeq/aeqd/database2"
+	// 	_ "github.com/mc-aeq/aeqd/database/ffldb"
 	// )
 
 	// Create a database and schedule it to be closed and removed on exit.
@@ -49,8 +49,8 @@ func Example_basicUsage() {
 	// This example assumes the ffldb driver is imported.
 	//
 	// import (
-	// 	"github.com/decred/dcrd/database2"
-	// 	_ "github.com/decred/dcrd/database/ffldb"
+	// 	"github.com/mc-aeq/aeqd/database2"
+	// 	_ "github.com/mc-aeq/aeqd/database/ffldb"
 	// )
 
 	// Create a database and schedule it to be closed and removed on exit.
@@ -115,8 +115,8 @@ func Example_blockStorageAndRetrieval() {
 	// This example assumes the ffldb driver is imported.
 	//
 	// import (
-	// 	"github.com/decred/dcrd/database2"
-	// 	_ "github.com/decred/dcrd/database/ffldb"
+	// 	"github.com/mc-aeq/aeqd/database2"
+	// 	_ "github.com/mc-aeq/aeqd/database/ffldb"
 	// )
 
 	// Create a database and schedule it to be closed and removed on exit.

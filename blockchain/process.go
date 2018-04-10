@@ -9,9 +9,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/decred/dcrd/chaincfg/chainhash"
-	"github.com/decred/dcrd/database"
-	"github.com/decred/dcrd/dcrutil"
+	"github.com/mc-aeq/aeqd/chaincfg/chainhash"
+	"github.com/mc-aeq/aeqd/database"
+	"github.com/mc-aeq/aeqd/dcrutil"
 )
 
 // BehaviorFlags is a bitmask defining tweaks to the normal behavior when

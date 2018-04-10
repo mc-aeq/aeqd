@@ -12,10 +12,10 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/decred/dcrd/chaincfg/chainhash"
-	"github.com/decred/dcrd/dcrjson"
-	"github.com/decred/dcrd/dcrutil"
-	"github.com/decred/dcrd/wire"
+	"github.com/mc-aeq/aeqd/chaincfg/chainhash"
+	"github.com/mc-aeq/aeqd/dcrjson"
+	"github.com/mc-aeq/aeqd/dcrutil"
+	"github.com/mc-aeq/aeqd/wire"
 )
 
 var (

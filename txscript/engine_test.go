@@ -8,9 +8,9 @@ package txscript_test
 import (
 	"testing"
 
-	"github.com/decred/dcrd/chaincfg/chainhash"
-	"github.com/decred/dcrd/txscript"
-	"github.com/decred/dcrd/wire"
+	"github.com/mc-aeq/aeqd/chaincfg/chainhash"
+	"github.com/mc-aeq/aeqd/txscript"
+	"github.com/mc-aeq/aeqd/wire"
 )
 
 // TestBadPC sets the pc to a deliberately bad result then confirms that Step()

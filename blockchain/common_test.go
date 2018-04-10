@@ -12,13 +12,13 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/decred/dcrd/blockchain/stake"
-	"github.com/decred/dcrd/chaincfg"
-	"github.com/decred/dcrd/chaincfg/chainhash"
-	"github.com/decred/dcrd/database"
-	_ "github.com/decred/dcrd/database/ffldb"
-	"github.com/decred/dcrd/txscript"
-	"github.com/decred/dcrd/wire"
+	"github.com/mc-aeq/aeqd/blockchain/stake"
+	"github.com/mc-aeq/aeqd/chaincfg"
+	"github.com/mc-aeq/aeqd/chaincfg/chainhash"
+	"github.com/mc-aeq/aeqd/database"
+	_ "github.com/mc-aeq/aeqd/database/ffldb"
+	"github.com/mc-aeq/aeqd/txscript"
+	"github.com/mc-aeq/aeqd/wire"
 )
 
 const (

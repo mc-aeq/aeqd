@@ -6,9 +6,9 @@
 package blockchain
 
 import (
-	"github.com/decred/dcrd/chaincfg/chainhash"
-	"github.com/decred/dcrd/database"
-	"github.com/decred/dcrd/wire"
+	"github.com/mc-aeq/aeqd/chaincfg/chainhash"
+	"github.com/mc-aeq/aeqd/database"
+	"github.com/mc-aeq/aeqd/wire"
 )
 
 // BlockLocator is used to help locate a specific block.  The algorithm for

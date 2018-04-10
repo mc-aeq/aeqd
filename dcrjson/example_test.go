@@ -9,7 +9,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/decred/dcrd/dcrjson"
+	"github.com/mc-aeq/aeqd/dcrjson"
 )
 
 // This example demonstrates how to create and marshal a command into a JSON-RPC

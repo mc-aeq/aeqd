@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/decred/dcrd/chaincfg"
-	"github.com/decred/dcrd/dcrutil"
-	"github.com/decred/dcrd/wire"
+	"github.com/mc-aeq/aeqd/chaincfg"
+	"github.com/mc-aeq/aeqd/dcrutil"
+	"github.com/mc-aeq/aeqd/wire"
 )
 
 // mustLockTimeToSeq converts the passed relative lock time to a sequence number

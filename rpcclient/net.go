@@ -8,7 +8,7 @@ package rpcclient
 import (
 	"encoding/json"
 
-	"github.com/decred/dcrd/dcrjson"
+	"github.com/mc-aeq/aeqd/dcrjson"
 )
 
 // AddNodeCommand enumerates the available commands that the AddNode function

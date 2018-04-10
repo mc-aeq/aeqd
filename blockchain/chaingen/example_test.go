@@ -7,8 +7,8 @@ package chaingen_test
 import (
 	"fmt"
 
-	"github.com/decred/dcrd/blockchain/chaingen"
-	"github.com/decred/dcrd/chaincfg"
+	"github.com/mc-aeq/aeqd/blockchain/chaingen"
+	"github.com/mc-aeq/aeqd/chaincfg"
 )
 
 // This example demonstrates creating a new generator instance and using it to

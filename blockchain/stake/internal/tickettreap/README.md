@@ -5,7 +5,7 @@ tickettreap
 (https://travis-ci.org/decred/dcrd) [![ISC License]
 (http://img.shields.io/badge/license-ISC-blue.svg)](http://copyfree.org)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)]
-(http://godoc.org/github.com/decred/dcrd/blockchain/stake/internal/tickettreap)
+(http://godoc.org/github.com/mc-aeq/aeqd/blockchain/stake/internal/tickettreap)
 
 Package tickettreap implements a treap data structure that is used to hold
 live tickets ordered by their key along with some associated data using a

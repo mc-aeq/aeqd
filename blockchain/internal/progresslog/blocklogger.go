@@ -11,8 +11,8 @@ import (
 
 	"github.com/btcsuite/btclog"
 
-	"github.com/decred/dcrd/dcrutil"
-	"github.com/decred/dcrd/wire"
+	"github.com/mc-aeq/aeqd/dcrutil"
+	"github.com/mc-aeq/aeqd/wire"
 )
 
 // BlockProgressLogger provides periodic logging for other services in order

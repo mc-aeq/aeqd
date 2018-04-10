@@ -8,8 +8,8 @@ package chaincfg
 import (
 	"time"
 
-	"github.com/decred/dcrd/chaincfg/chainhash"
-	"github.com/decred/dcrd/wire"
+	"github.com/mc-aeq/aeqd/chaincfg/chainhash"
+	"github.com/mc-aeq/aeqd/wire"
 )
 
 // MainNet ------------------------------------------------------------------------

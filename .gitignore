@@ -18,6 +18,7 @@ dcrd.db
 _obj
 _test
 vendor
+.vscode
 
 # Architecture specific extensions/prefixes
 *.[568vq]

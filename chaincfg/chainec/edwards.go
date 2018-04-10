@@ -9,7 +9,7 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/decred/dcrd/dcrec/edwards"
+	"github.com/mc-aeq/aeqd/dcrec/edwards"
 )
 
 type edwardsDSA struct {

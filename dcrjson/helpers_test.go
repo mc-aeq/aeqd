@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/decred/dcrd/dcrjson"
+	"github.com/mc-aeq/aeqd/dcrjson"
 )
 
 // TestHelpers tests the various helper functions which create pointers to

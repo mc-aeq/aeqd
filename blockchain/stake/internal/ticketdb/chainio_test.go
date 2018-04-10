@@ -13,12 +13,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/decred/dcrd/blockchain/stake/internal/dbnamespace"
-	"github.com/decred/dcrd/blockchain/stake/internal/tickettreap"
-	"github.com/decred/dcrd/chaincfg"
-	"github.com/decred/dcrd/chaincfg/chainhash"
-	"github.com/decred/dcrd/database"
-	_ "github.com/decred/dcrd/database/ffldb"
+	"github.com/mc-aeq/aeqd/blockchain/stake/internal/dbnamespace"
+	"github.com/mc-aeq/aeqd/blockchain/stake/internal/tickettreap"
+	"github.com/mc-aeq/aeqd/chaincfg"
+	"github.com/mc-aeq/aeqd/chaincfg/chainhash"
+	"github.com/mc-aeq/aeqd/database"
+	_ "github.com/mc-aeq/aeqd/database/ffldb"
 )
 
 const (

@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/decred/dcrd/dcrjson"
+	"github.com/mc-aeq/aeqd/dcrjson"
 )
 
 // TestCmdMethod tests the CmdMethod function to ensure it returns the expected
