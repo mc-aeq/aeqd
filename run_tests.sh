@@ -43,7 +43,7 @@ testrepo () {
     ./...
   if [ $? != 0 ]; then
     echo 'gometalinter has some complaints'
-    exit 1
+    exit 2
   fi
 
   # Test application install
@@ -54,14 +54,14 @@ testrepo () {
   fi
   if [ $? != 0 ]; then
     echo 'go install failed'
-    exit 1
+    exit 3
   fi
 
   # Check tests
   env GORACE='halt_on_error=1' go test -short -race -tags rpctest ./...
   if [ $? != 0 ]; then
     echo 'go tests failed'
-    exit 1
+    exit 4
   fi
 
   echo "------------------------------------------"
@@ -70,7 +70,7 @@ testrepo () {
 
 if [ $GOVERSION == "local" ]; then
     testrepo
-    exit
+    exit 0
 fi
 
 mkdir -p ~/.cache
@@ -80,19 +80,19 @@ if [ -f ~/.cache/$DOCKER_IMAGE_TAG.tar ]; then
 	docker load -i ~/.cache/$DOCKER_IMAGE_TAG.tar
 	if [ $? != 0 ]; then
 		echo 'docker load failed'
-		exit 1
+		exit 5
 	fi
 else
 	# pull and save image to cache 
 	docker pull decred/$DOCKER_IMAGE_TAG
 	if [ $? != 0 ]; then
 		echo 'docker pull failed'
-		exit 1
+		exit 6
 	fi
 	docker save decred/$DOCKER_IMAGE_TAG > ~/.cache/$DOCKER_IMAGE_TAG.tar
 	if [ $? != 0 ]; then
 		echo 'docker save failed'
-		exit 1
+		exit 7
 	fi
 fi
 
@@ -103,5 +103,5 @@ docker run --rm -it -v $(pwd):/src decred/$DOCKER_IMAGE_TAG /bin/bash -c "\
   bash run_tests.sh local"
 if [ $? != 0 ]; then
 	echo 'docker run failed'
-	exit 1
+	exit 8
 fi
