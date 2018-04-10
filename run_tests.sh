@@ -21,7 +21,7 @@ set -ex
 #Default GOVERSION
 GOVERSION=${1:-1.10}
 REPO=aeqd
-DOCKER_IMAGE_TAG=aeq:$GOVERSION
+DOCKER_IMAGE_TAG=aeqd:$GOVERSION
 
 testrepo () {
   TMPFILE=$(mktemp)
