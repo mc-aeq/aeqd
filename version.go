@@ -1,5 +1,6 @@
 // Copyright (c) 2013-2014 The btcsuite developers
 // Copyright (c) 2015-2017 The Decred developers
+// Copyright (c) 2017-2018 The Aequator developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -23,9 +24,12 @@ const (
 
 // These constants define the application version and follow the semantic
 // versioning 2.0.0 spec (http://semver.org/).
+
+// the point where we forked the decred daemon was at 1.2.0+dev
+// since we're using 1.2.0+dev as codebase for our version. we start with 1.0.0+dev
 const (
 	appMajor uint = 1
-	appMinor uint = 2
+	appMinor uint = 0
 	appPatch uint = 0
 )
 

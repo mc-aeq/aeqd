@@ -1,5 +1,6 @@
 // Copyright (c) 2014-2016 The btcsuite developers
 // Copyright (c) 2015-2017 The Decred developers
+// Copyright (c) 2017-2018 The Aequator developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -474,9 +475,8 @@ var MainNetParams = Params{
 	Net:         wire.MainNet,
 	DefaultPort: "9108",
 	DNSSeeds: []DNSSeed{
-		{"mainnet-seed.decred.mindcry.org", true},
-		{"mainnet-seed.decred.netpurgatory.com", true},
-		{"mainnet-seed.decred.org", true},
+		{"main.seed.aequator.io", true},
+		// todo: insert more DNS seeds for the mainnet
 	},
 
 	// Chain parameters
