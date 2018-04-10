@@ -1,13 +1,13 @@
-#decred-golang-builder-1.10
+# aeqd:1.10
 # This image may be called with the run_tests.sh script included in any of the
 # supported go repos.
 # ./run_tests.sh 1.10
 
 FROM golang:1.10
 
-LABEL description="Decred golang builder image"
+LABEL description="AEQD golang builder image"
 LABEL version="1.0"
-LABEL maintainer "dhill@mindcry.org"
+LABEL maintainer "dev@genotrust.coop"
 
 ENV TERM linux
 ENV USER build
@@ -28,10 +28,8 @@ RUN mkdir /release && \
 # create directory to get source from
 RUN mkdir /src && \
     chown $USER /src && \
-    mkdir -p /go/src/github.com/decred/aeqd && \
-    mkdir -p /go/src/github.com/decred/dcrwallet && \
-    mkdir -p /go/src/github.com/decred/dcrctl && \
-    mkdir -p /go/src/github.com/decred/dcrrpcclient && \
+    mkdir -p /go/src/github.com/mc-aeq/aeqd && \
+    mkdir -p /go/src/github.com/mc-aeq/aeqw && \
     chown -R $USER /go/src
 
 # switch user
