@@ -35,6 +35,7 @@ _testmain.go
 # Binaries
 *.exe
 aeqd
+debug
 cmd/addblock/addblock
 cmd/checkdevpremine/checkdevpremine
 cmd/dcrctl/dcrctl
