@@ -1,24 +1,21 @@
 language: go
 go:
-  - 1.x
-
+- 1.x
 sudo: required
 services:
-  - docker
-
+- docker
 env:
-  - GOVERSION=1.9
-  - GOVERSION=1.10
-
+- GOVERSION=1.9
+- GOVERSION=1.10
 install: true
-
 cache:
   directories:
-    - ~/.cache
-
+  - ~/.cache
 script:
-  - ./run_tests.sh $GOVERSION
-
+- ./run_tests.sh $GOVERSION
 notifications:
-  slack: trustchaintech:xequmrRoiVv4lMHtufkxwAEt
-  
+  slack:
+    matrix:
+    - trustchaintech:xequmrRoiVv4lMHtufkxwAEt
+    rooms:
+      secure: NU7kWiisPjzEhAfm0RKER9Lk7/+VsH0Zi01eQFS8SCSyDDwS+TB0bpXz6/Fyz7+g918VitTShgASMvLEQXo5weZeSaEpFiyikETucQzPs9gxHdMkQloRimAHIxyQLlL4fIpcN2jISQIRp2G1EDQb8J1rWStMZCEw9flqEc8Jr1WTsxrDjJW44pm100Am2R0fC+YshJRuswplDo3x514WXbTNrDvfrbT6IxVBRJ1zeD7pkgVw/6d7v+eVeHSRcJMZTN6gZs2k7o3cYEMpnRO65xQ8oNoeul61yN33+U+RjUR+wWq3qpCVaoflE3BWtl29I5E76t7iGeeyddlfhTAMn+emj1GGdeXVhxYGlmSh1EgUXc3PD5jg7MVHm7fmNpZ9DhRsNfWQT+PSa3ycWi3oSqVcvxGLCVXtzqS9vwhItmm6F+9+ushImGODuE7fJJIoVcxyUQDdEWXolSTMDTTJAgFLCTW3PqbrfiOoAYd2WcIYuwtAOn+rB1ZXgcIB5fR5UxPGVXDuqc/u4PhFFjeeYefiH/QzcVWpcnND+WdXXESw8//M8q7BZ0GXxppv4765HLL8QlDOrlp2qgHxXntPdSh30QI6hkFvou1HWB6W17z35qkxWceU0t7thBSZ/AJn8mmmzjk9K8GCV8D7610NZzszngayaYIEpY2gsHJp9eM=
