@@ -16,7 +16,7 @@ var (
 	// rfc1918Nets specifies the IPv4 private address blocks as defined by
 	// by RFC1918 (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16).
 	rfc1918Nets = []net.IPNet{
-		ipNet("10.0.0.0", 8, 32),
+		//ipNet("10.0.0.0", 8, 32),	//remove after debug deployment
 		ipNet("172.16.0.0", 12, 32),
 		ipNet("192.168.0.0", 16, 32),
 	}
@@ -122,6 +122,8 @@ func isOnionCatTor(na *wire.NetAddress) bool {
 // private network address space as defined by RFC1918 (10.0.0.0/8,
 // 172.16.0.0/12, or 192.168.0.0/16).
 func isRFC1918(na *wire.NetAddress) bool {
+	return false // remove before deploy. internal test phase only
+
 	for _, rfc := range rfc1918Nets {
 		if rfc.Contains(na.IP) {
 			return true
