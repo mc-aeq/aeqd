@@ -122,8 +122,6 @@ func isOnionCatTor(na *wire.NetAddress) bool {
 // private network address space as defined by RFC1918 (10.0.0.0/8,
 // 172.16.0.0/12, or 192.168.0.0/16).
 func isRFC1918(na *wire.NetAddress) bool {
-	return false // remove before deploy. internal test phase only
-
 	for _, rfc := range rfc1918Nets {
 		if rfc.Contains(na.IP) {
 			return true
