@@ -473,7 +473,7 @@ type Params struct {
 var MainNetParams = Params{
 	Name:        "mainnet",
 	Net:         wire.MainNet,
-	DefaultPort: "9108",
+	DefaultPort: "", // not telling you until the release. #haha
 	DNSSeeds: []DNSSeed{
 		{"main.seed.aequator.io", true},
 		// todo: insert more DNS seeds for the mainnet
@@ -682,11 +682,9 @@ var MainNetParams = Params{
 var TestNet2Params = Params{
 	Name:        "testnet2",
 	Net:         wire.TestNet2,
-	DefaultPort: "19108",
+	DefaultPort: "10886",
 	DNSSeeds: []DNSSeed{
-		{"testnet-seed.decred.mindcry.org", true},
-		{"testnet-seed.decred.netpurgatory.com", true},
-		{"testnet-seed.decred.org", true},
+		{"test.seed.aequator.io", true},
 	},
 
 	// Chain parameters
@@ -867,7 +865,7 @@ var TestNet2Params = Params{
 var SimNetParams = Params{
 	Name:        "simnet",
 	Net:         wire.SimNet,
-	DefaultPort: "18555",
+	DefaultPort: "10887",
 	DNSSeeds:    []DNSSeed{}, // NOTE: There must NOT be any seeds.
 
 	// Chain parameters
