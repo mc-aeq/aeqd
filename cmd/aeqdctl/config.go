@@ -31,9 +31,9 @@ const (
 
 var (
 	aeqdHomeDir            = dcrutil.AppDataDir("aeqd", false)
-	dcrctlHomeDir          = dcrutil.AppDataDir("dcrctl", false)
-	dcrwalletHomeDir       = dcrutil.AppDataDir("dcrwallet", false)
-	defaultConfigFile      = filepath.Join(dcrctlHomeDir, "dcrctl.conf")
+	dcrctlHomeDir          = dcrutil.AppDataDir("aeqdctl", false)
+	dcrwalletHomeDir       = dcrutil.AppDataDir("aeqw", false)
+	defaultConfigFile      = filepath.Join(dcrctlHomeDir, "aeqdctl.conf")
 	defaultRPCServer       = "localhost"
 	defaultWalletRPCServer = "localhost"
 	defaultRPCCertFile     = filepath.Join(aeqdHomeDir, "rpc.cert")
