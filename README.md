@@ -6,7 +6,7 @@ aeqd - Æquator daemon
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](http://copyfree.org)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](https://godoc.org/github.com/mc-aeq/aeqd)
 
-aeqd is fork of [decred/aeqd]. aeqd is a full node Decred implementation written in Go (golang).
+aeqd is fork of [decred/dcrd]. aeqd is a full node Decred implementation written in Go (golang).
 
 This acts as a chain daemon for the [Æquator](https://aequator.iog) cryptocurrency.
 aeqd maintains the entire past transactional ledger of Æquator and allows relaying of transactions to other Æquator nodes across the world. 
@@ -97,4 +97,4 @@ aeqd is a fork from aeqd and also under the ISC License.
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
-   [decred/aeqd]: <https://github.com/decred/aeqd> 
+   [decred/dcrd]: <https://github.com/decred/dcrd> 
