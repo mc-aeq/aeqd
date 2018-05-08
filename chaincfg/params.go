@@ -872,13 +872,13 @@ var SimNetParams = Params{
 	RetargetAdjustmentFactor: 4,
 
 	// Subsidy parameters.
-	BaseSubsidy:              50000000000,
-	MulSubsidy:               100,
-	DivSubsidy:               101,
-	SubsidyReductionInterval: 128,
-	WorkRewardProportion:     6,
-	StakeRewardProportion:    3,
-	BlockTaxProportion:       1,
+	BaseSubsidy:              6000000000, // 60 Coin
+	MulSubsidy:               10000,
+	DivSubsidy:               10104,
+	SubsidyReductionInterval: 52560,
+	WorkRewardProportion:     75, // 75% for PoW
+	StakeRewardProportion:    20, // 20% for PoS
+	BlockTaxProportion:       5,  // 5% for ORG. ORG gets split up into 2% PR, 3% point of sale acceptance in external script run by the Aequator team
 
 	// Checkpoints ordered from oldest to newest.
 	Checkpoints: nil,

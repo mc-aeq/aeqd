@@ -24,5 +24,5 @@ var BlockOneLedgerTestNet2 = []*TokenPayout{
 // network. See under "Decred organization related parameters" in params.go
 // for information on how to spend these outputs.
 var BlockOneLedgerSimNet = []*TokenPayout{
-	{"Sshw6S86G2bV6W32cbc7EhtFy8f93rU6pae", 100000 * 1e8},
+	{"Ssqpw9GquM9gVjLrsbBP7KnNWq4pc1v95Gq", 100000 * 1e8},
 }
