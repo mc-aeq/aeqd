@@ -9,6 +9,7 @@ env:
 - GOVERSION=1.10
 install: true
 cache:
+  timeout: 1000
   directories:
   - ~/.cache
 script:
