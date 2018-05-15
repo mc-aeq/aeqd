@@ -10,12 +10,12 @@ import (
 	"os"
 	"path/filepath"
 
+	flags "github.com/jessevdk/go-flags"
 	"github.com/mc-aeq/aeqd/chaincfg"
 	"github.com/mc-aeq/aeqd/database"
 	_ "github.com/mc-aeq/aeqd/database/ffldb"
 	"github.com/mc-aeq/aeqd/dcrutil"
 	"github.com/mc-aeq/aeqd/wire"
-	flags "github.com/jessevdk/go-flags"
 )
 
 const (

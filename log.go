@@ -11,6 +11,7 @@ import (
 	"path/filepath"
 
 	"github.com/btcsuite/btclog"
+	"github.com/jrick/logrotate/rotator"
 	"github.com/mc-aeq/aeqd/addrmgr"
 	"github.com/mc-aeq/aeqd/blockchain"
 	"github.com/mc-aeq/aeqd/blockchain/indexers"
@@ -20,7 +21,6 @@ import (
 	"github.com/mc-aeq/aeqd/mempool"
 	"github.com/mc-aeq/aeqd/peer"
 	"github.com/mc-aeq/aeqd/txscript"
-	"github.com/jrick/logrotate/rotator"
 )
 
 // logWriter implements an io.Writer that outputs to both standard output and

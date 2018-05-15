@@ -12,8 +12,8 @@ import (
 	"strings"
 
 	"github.com/btcsuite/btclog"
-	"github.com/mc-aeq/aeqd/database"
 	flags "github.com/jessevdk/go-flags"
+	"github.com/mc-aeq/aeqd/database"
 )
 
 const (

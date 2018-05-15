@@ -35,6 +35,7 @@ import (
 
 	"github.com/btcsuite/websocket"
 
+	"github.com/jrick/bitset"
 	"github.com/mc-aeq/aeqd/blockchain"
 	"github.com/mc-aeq/aeqd/blockchain/stake"
 	"github.com/mc-aeq/aeqd/certgen"
@@ -48,7 +49,6 @@ import (
 	"github.com/mc-aeq/aeqd/mining"
 	"github.com/mc-aeq/aeqd/txscript"
 	"github.com/mc-aeq/aeqd/wire"
-	"github.com/jrick/bitset"
 )
 
 // API version constants

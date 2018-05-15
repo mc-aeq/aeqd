@@ -16,8 +16,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mc-aeq/aeqd/certgen"
 	flags "github.com/jessevdk/go-flags"
+	"github.com/mc-aeq/aeqd/certgen"
 )
 
 type config struct {
