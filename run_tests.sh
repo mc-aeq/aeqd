@@ -20,8 +20,9 @@ set -ex
 
 #Default GOVERSION
 GOVERSION=${1:-1.10}
-REPO=dcrd
-DOCKER_IMAGE_TAG=decred-golang-builder-$GOVERSION
+REPO=aeqd
+DOCKER_IMAGE_TAG=aeqd:$GOVERSION
+DOCKER_FILE=aeqd_$GOVERSION
 
 testrepo () {
   TMPFILE=$(mktemp)
@@ -75,31 +76,31 @@ fi
 
 mkdir -p ~/.cache
 
-if [ -f ~/.cache/$DOCKER_IMAGE_TAG.tar ]; then
+if [ -f ~/.cache/$DOCKER_FILE.tar ]; then
 	# load via cache
-	docker load -i ~/.cache/$DOCKER_IMAGE_TAG.tar
+	docker load -i ~/.cache/$DOCKER_FILE.tar
 	if [ $? != 0 ]; then
 		echo 'docker load failed'
 		exit 5
 	fi
 else
 	# pull and save image to cache 
-	docker pull decred/$DOCKER_IMAGE_TAG
+	docker pull aequator/$DOCKER_IMAGE_TAG
 	if [ $? != 0 ]; then
 		echo 'docker pull failed'
 		exit 6
 	fi
-	docker save decred/$DOCKER_IMAGE_TAG > ~/.cache/$DOCKER_IMAGE_TAG.tar
+	docker save aequator/$DOCKER_IMAGE_TAG > ~/.cache/$DOCKER_FILE.tar
 	if [ $? != 0 ]; then
 		echo 'docker save failed'
 		exit 7
 	fi
 fi
 
-docker run --rm -it -v $(pwd):/src decred/$DOCKER_IMAGE_TAG /bin/bash -c "\
+docker run --rm -it -v $(pwd):/src aequator/$DOCKER_IMAGE_TAG /bin/bash -c "\
   rsync -ra --filter=':- .gitignore'  \
-  /src/ /go/src/github.com/decred/$REPO/ && \
-  cd github.com/decred/$REPO/ && \
+  /src/ /go/src/github.com/mc-aeq/$REPO/ && \
+  cd github.com/mc-aeq/$REPO/ && \
   bash run_tests.sh local"
 if [ $? != 0 ]; then
 	echo 'docker run failed'
