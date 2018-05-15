@@ -705,10 +705,10 @@ var TestNet2Params = Params{
 	RetargetAdjustmentFactor: 4,
 
 	// Subsidy parameters.
-	BaseSubsidy:              2500000000, // 25 Coin
-	MulSubsidy:               100,
-	DivSubsidy:               101,
-	SubsidyReductionInterval: 2048,
+	BaseSubsidy:              6000000000, // 60 Coin
+	MulSubsidy:               10000,
+	DivSubsidy:               10104,
+	SubsidyReductionInterval: 52560,
 	WorkRewardProportion:     75, // 75% for PoW
 	StakeRewardProportion:    20, // 20% for PoS
 	BlockTaxProportion:       5,  // 5% for ORG. ORG gets split up into 2% PR, 3% point of sale acceptance in external script run by the Aequator team
@@ -834,9 +834,9 @@ var TestNet2Params = Params{
 	StakeMajorityMultiplier: 3,
 	StakeMajorityDivisor:    4,
 
-	// Decred organization related parameters.
-	// Organization address is TshCvH6Uw44MNseuEEU9sjTyTLzcngcaTrm
-	OrganizationPkScript:        hexDecode("4fa6cbd0dbe5ec407fe4c8ad374e667771fa0d44"),
+	// Aequator organization related parameters.
+	// Organization address is Tch1RbcWR366a1WohpXMmSnB87t9idi2p5p
+	OrganizationPkScript:        hexDecode("a91468227503bb5fdd5e716d2030e332c44acce3843b87"),
 	OrganizationPkScriptVersion: 0,
 	BlockOneLedger:              BlockOneLedgerTestNet2,
 }
@@ -875,7 +875,7 @@ var SimNetParams = Params{
 	BaseSubsidy:              6000000000, // 60 Coin
 	MulSubsidy:               10000,
 	DivSubsidy:               10104,
-	SubsidyReductionInterval: 52560,
+	SubsidyReductionInterval: 525,
 	WorkRewardProportion:     75, // 75% for PoW
 	StakeRewardProportion:    20, // 20% for PoS
 	BlockTaxProportion:       5,  // 5% for ORG. ORG gets split up into 2% PR, 3% point of sale acceptance in external script run by the Aequator team
