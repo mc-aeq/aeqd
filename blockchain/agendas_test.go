@@ -15,7 +15,6 @@ import (
 // expected deployment version.
 func testLNFeaturesDeployment(t *testing.T, params *chaincfg.Params, deploymentVer uint32) {
 	// disabled LN test
-	return
 	/*
 		// baseConsensusScriptVerifyFlags are the expected script flags when the
 		// agenda is not active.
