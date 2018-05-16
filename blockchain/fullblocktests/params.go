@@ -6,7 +6,6 @@ package fullblocktests
 
 import (
 	"encoding/hex"
-	"math"
 	"math/big"
 	"time"
 
@@ -108,7 +107,7 @@ var (
 var simNetParams = &chaincfg.Params{
 	Name:        "simnet",
 	Net:         wire.SimNet,
-	DefaultPort: "18555",
+	DefaultPort: "10887",
 	DNSSeeds:    nil, // NOTE: There must NOT be any seeds.
 
 	// Chain parameters
@@ -129,13 +128,13 @@ var simNetParams = &chaincfg.Params{
 	RetargetAdjustmentFactor: 4,
 
 	// Subsidy parameters.
-	BaseSubsidy:              50000000000,
-	MulSubsidy:               100,
-	DivSubsidy:               101,
-	SubsidyReductionInterval: 128,
-	WorkRewardProportion:     6,
-	StakeRewardProportion:    3,
-	BlockTaxProportion:       1,
+	BaseSubsidy:              6000000000, // 60 Coin
+	MulSubsidy:               10000,
+	DivSubsidy:               10104,
+	SubsidyReductionInterval: 525,
+	WorkRewardProportion:     75, // 75% for PoW
+	StakeRewardProportion:    20, // 20% for PoS
+	BlockTaxProportion:       5,  // 5% for ORG. ORG gets split up into 2% PR, 3% point of sale acceptance in external script run by the Aequator team
 
 	// Checkpoints ordered from oldest to newest.
 	Checkpoints: nil,
@@ -148,92 +147,7 @@ var simNetParams = &chaincfg.Params{
 	RuleChangeActivationMultiplier: 3,   // 75%
 	RuleChangeActivationDivisor:    4,
 	RuleChangeActivationInterval:   320, // 320 seconds
-	Deployments: map[uint32][]chaincfg.ConsensusDeployment{
-		4: {{
-			Vote: chaincfg.Vote{
-				Id:          chaincfg.VoteIDMaxBlockSize,
-				Description: "Change maximum allowed block size from 1MiB to 1.25MB",
-				Mask:        0x0006, // Bits 1 and 2
-				Choices: []chaincfg.Choice{{
-					Id:          "abstain",
-					Description: "abstain voting for change",
-					Bits:        0x0000,
-					IsAbstain:   true,
-					IsNo:        false,
-				}, {
-					Id:          "no",
-					Description: "reject changing max allowed block size",
-					Bits:        0x0002, // Bit 1
-					IsAbstain:   false,
-					IsNo:        true,
-				}, {
-					Id:          "yes",
-					Description: "accept changing max allowed block size",
-					Bits:        0x0004, // Bit 2
-					IsAbstain:   false,
-					IsNo:        false,
-				}},
-			},
-			StartTime:  0,             // Always available for vote
-			ExpireTime: math.MaxInt64, // Never expires
-		}},
-		5: {{
-			Vote: chaincfg.Vote{
-				Id:          chaincfg.VoteIDSDiffAlgorithm,
-				Description: "Change stake difficulty algorithm as defined in DCP0001",
-				Mask:        0x0006, // Bits 1 and 2
-				Choices: []chaincfg.Choice{{
-					Id:          "abstain",
-					Description: "abstain voting for change",
-					Bits:        0x0000,
-					IsAbstain:   true,
-					IsNo:        false,
-				}, {
-					Id:          "no",
-					Description: "keep the existing algorithm",
-					Bits:        0x0002, // Bit 1
-					IsAbstain:   false,
-					IsNo:        true,
-				}, {
-					Id:          "yes",
-					Description: "change to the new algorithm",
-					Bits:        0x0004, // Bit 2
-					IsAbstain:   false,
-					IsNo:        false,
-				}},
-			},
-			StartTime:  0,             // Always available for vote
-			ExpireTime: math.MaxInt64, // Never expires
-		}},
-		6: {{
-			Vote: chaincfg.Vote{
-				Id:          chaincfg.VoteIDLNFeatures,
-				Description: "Enable features defined in DCP0002 and DCP0003 necessary to support Lightning Network (LN)",
-				Mask:        0x0006, // Bits 1 and 2
-				Choices: []chaincfg.Choice{{
-					Id:          "abstain",
-					Description: "abstain voting for change",
-					Bits:        0x0000,
-					IsAbstain:   true,
-					IsNo:        false,
-				}, {
-					Id:          "no",
-					Description: "keep the existing consensus rules",
-					Bits:        0x0002, // Bit 1
-					IsAbstain:   false,
-					IsNo:        true,
-				}, {
-					Id:          "yes",
-					Description: "change to the new consensus rules",
-					Bits:        0x0004, // Bit 2
-					IsAbstain:   false,
-					IsNo:        false,
-				}},
-			},
-			StartTime:  0,             // Always available for vote
-			ExpireTime: math.MaxInt64, // Never expires
-		}},
-	},
+	Deployments:                    map[uint32][]chaincfg.ConsensusDeployment{},
 
 	// Enforce current block version once majority of the network has
 	// upgraded.
