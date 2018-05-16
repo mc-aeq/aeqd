@@ -10,7 +10,6 @@ import (
 
 	"github.com/mc-aeq/aeqd/chaincfg"
 	"github.com/mc-aeq/aeqd/chaincfg/chainhash"
-	"github.com/mc-aeq/aeqd/wire"
 )
 
 // ThresholdState define the various threshold states used when voting on
@@ -529,7 +528,7 @@ func (b *BlockChain) ThresholdState(hash *chainhash.Hash, version uint32, deploy
 func (b *BlockChain) isLNFeaturesAgendaActive(prevNode *blockNode) (bool, error) {
 	// Determine the version for the LN features agenda as defined in
 	// DCP0002 and DCP0003 for the provided network.
-	deploymentVer := uint32(5)
+	/*deploymentVer := uint32(5)
 	if b.chainParams.Net != wire.MainNet {
 		deploymentVer = 6
 	}
@@ -538,12 +537,12 @@ func (b *BlockChain) isLNFeaturesAgendaActive(prevNode *blockNode) (bool, error)
 		chaincfg.VoteIDLNFeatures)
 	if err != nil {
 		return false, err
-	}
+	}*/
 
 	// NOTE: The choice field of the return threshold state is not examined
 	// here because there is only one possible choice that can be active for
 	// the agenda, which is yes, so there is no need to check it.
-	return state.State == ThresholdActive, nil
+	return false, nil
 
 }
 
